@@ -2490,6 +2490,11 @@ input, select, textarea {
 		position: relative;
 	}
 
+		.icon i {
+			font-size: 40px;
+			color: white;
+		}
+
 		.icon:before {
 			-moz-osx-font-smoothing: grayscale;
 			-webkit-font-smoothing: antialiased;
