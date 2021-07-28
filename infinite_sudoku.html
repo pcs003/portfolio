@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<!--
+	Hyperspace by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Parth Shah - Infinite Sudoku</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="shortcut icon" type="image/jpg" href="images/favicon.png"/>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="index.html" class="title">Parth Shah</a>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="datcord.html">Datcord</a></li>
+						<li><a href="infit.html">Infit</a></li>
+						<li><a href="otherworlds.html">Otherworlds</a></li>
+						<li><a href="qpl.html">QPL</a></li>
+                        <li><a href="qpl.html" class="active">Infinite Sudoku</a></li>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<section id="main" class="wrapper">
+						<div class="inner">
+							<h1 class="major">Infinite Sudoku</h1>
+							<span class="image fit"><img src="images/datcord-banner.png" alt="" /></span>
+							<p>Ever since I was a kid I have been solving sudoku puzzles with my grandpa. It's thanks to him that I am as passionate about puzzles and problem solving as I am today. We buy him a sudoku book every birthday and christmas but he finishes them so fast so I wanted to make an app in which he could endlessly solve sudoku puzzles, so I made Infinite Sudoku. 
+							</p>
+							<p>I started this adventure by writing a sudoku solver in C++. It was a backtracking algorithm that would go to the first empty square and store the possible values for that square and select one randomly. Then it would do that with the next square and so on all the while checking if the selected number makes the sudoku invalid by creating a repeated number in a row, column, or square. If so, it would backtrack to the most recently checked square that had a possible number remaining and change to that number.</p>
+                            <p>After that I began work on the sudoku generator. The way the generator works is it produces a solved sudoku and then removes numbers at random with the amount of removed numbers depending on the desired difficulty of the puzzle. This was not a perfect way to assess difficulty but it was good enough for me to start. I filled the grid by creating an array of the numbers 1-9, shuffling it using a random seed based on the current time, and using it as the first row. For the subsequent rows I took the same array, but this time I added numbers to the row one square at a time. First, all numbers that were impossible for that square were removed (number already existing in row, column, or 3x3 square), then a number was randomly selected from the remaining options. This was repeated for all remaining squares resulting in a solved sudoku. After that the desired amount of numbers were removed and the puzzle was ready.</p>
+							<p>The next phase was turning it into a playable game for my grandpa. I had recently learned Unity and C# to make my <a href="https://github.com/pcs003/Space-Platformer">Space Platformer</a> game so I decided to use Unity for this as well. I used GIMP to create all my own art and C# to write the scripts for game logic. I even wrote my own music! Finally the game was completed and I published it on the Play Store for my grandpa to download and play. He loved it :)</p>
+                            <p><a href="https://github.com/pcs003/InfiniteSudoku">Github</a> | <a href="https://play.google.com/store/apps/details?id=com.ParthShahStudios.InfiniteSudoku">Play Store</a></p>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer" class="wrapper alt">
+				<div class="inner">
+					<ul class="menu">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
